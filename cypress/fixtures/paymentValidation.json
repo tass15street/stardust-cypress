@@ -1,0 +1,20 @@
+{
+  "name" : "test",
+  "empty" : " ",
+  "payment_exp" : "1133",
+  "payment_cvc" : "323",
+  "insufficient_payment" :"4000000000009995",
+  "decline_payment": "4000000000000002",
+  "incorrect_cvc_payment": "4000000000000127",
+  "expired_card_payment": "4000000000000069",
+  "processing_error_payment": "4000000000000119",
+  "valid_payment" : "4000000000003055",
+  "invalid_payment" : "4000000000003044",
+  "msg_name_required": "The name field is required.",
+  "msg_inv_cardNumber": "Your card number is invalid.",
+  "msg_insufficent_cardNumber": "Failed to create payment method with Stripe. Message was: Your card has insufficient funds.",
+  "msg_decline_cardNumber": "Failed to create payment method with Stripe. Message was: Your card was declined.",
+  "msg_incorrect_cvc_payment": "Failed to create payment method with Stripe. Message was: Your card's security code is incorrect.",
+  "msg_expired_card_payment": "Failed to create payment method with Stripe. Message was: Your card has expired.",
+  "msg_processing_error_payment": "Failed to create payment method with Stripe. Message was: An error occurred while processing your card. Try again in a little bit."
+}

@@ -1,0 +1,9 @@
+{
+    "ma_DeletePayment": "Your payment method will be permanently deleted. Are you sure you want to continue?",
+    "ma_stillActive": "Could not remove payment method as your subscription is still active",
+    "ma_duplicateEmail_Main_Msg": "User with email test@test.com is already registered in the system.",
+    "ma_duplicateEmail_Sub_Msg": "User with email test@test.com is already registered in the system.",
+    "ma_incorrectPassword": "Incorrect Password!",
+    "ma_passwordChange": "Password changed successfully",
+    "lgn_error": "Username or password doesn't match"
+}

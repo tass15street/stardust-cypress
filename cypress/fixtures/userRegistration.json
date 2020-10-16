@@ -1,0 +1,28 @@
+{
+    "btn_update_state" : "disabled",
+    "field_length" : "testertestertestertestertestertestertestertestergre",
+    "long_text": "testertestertestertestertestertestertestertester",
+    "required" : " ",
+    "es_user_name" : "test_es",
+    "aw_user_name" : "test_aw",
+    "ss_user_name" : "test_ss",
+    "duplicateEmail" : "test@test.com",
+    "invalidEmail" : "test@test.123333com",
+    "email" :        "my@email.com",
+    "password" : "test1234",
+    "invalidPassword" : "test",
+    "invalidPhone" : "12345678",
+    "normalPhone" : "1234567890",
+    "msg_firstName": "The first name",
+    "msg_lastName": "The last name",
+    "msg_loginEmail": "The e-mail",
+    "msg_mobile": "The phone number",
+    "msg_password": "The password",
+    "msg_required": " field is required",
+    "msg_length": " field may not be greater than 50 characters.",
+    "msg_invEmail": " field must be a valid email",
+    "msg_inv_mobile": "The phone number format is incorrect",
+    "msg_duplicateEmail": "User with email test@test.com is already registered in the system."
+
+
+  }

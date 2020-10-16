@@ -1,0 +1,26 @@
+{
+  "btn_update_state" : "disabled",
+  "field_length" : "testertestertestertestertestertestertestertestergre",
+  "long_text": "testertestertestertestertestertestertestertester",
+  "required" : " ",
+  "upd_names" : "test",
+  "duplicateEmail" : "test@test.com",
+  "invalidEmail" : "test@test.123333com",
+  "email" :        "my@email.com",
+  "new_password" : "test11",
+  "crt_password" : "test1234",
+  "invalidPassword" : "test",
+  "invalidPhone" : "123456789033",
+  "nonMatchPassword" : "test33",
+  "normalPhone" : "1234567890",
+  "msg_firstName": "The First Name",
+  "msg_lastName": "The Last Name",
+  "msg_loginEmail": "The Login Email",
+  "msg_mobile": "The Mobile",
+  "msg_required": " field is required",
+  "msg_length": " field may not be greater than 50 characters.",
+  "msg_invEmail": " field must be a valid email",
+  "msg_inv_mobile": "The number format is incorrect",
+  "msg_nonMatchingPasswords": "The New Password confirmation does not match"
+
+}

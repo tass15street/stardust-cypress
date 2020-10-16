@@ -1,0 +1,35 @@
+{
+  "name": "cy-bdd-stardust",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:login": "cypress-tags run --browser chrome --config pageLoadTimeout=100000 -e TAGS='@login'",
+    "cy:run-dashboard": "cypress run --record --key 54b7a8fd-ebe7-48d8-9236-988e6920b2a6",
+    "cy:run": "cypress run",
+    "cy:update-snapshots": "cypress run --env updateSnapshots=true",
+    "clean:reports": "rm -rf mochawesome-report/",
+    "test": "npm run clean: reports && cypress run",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > TestReport/cypress-tests-report.json",
+    "create:html:report": "marge --reportDir TestReport TestReport/cypress-tests-report.json",
+    "generate:html:report": "npm run merge: reports && npm run create:html:report",
+    "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha > cypress/reports/mochareports/report.json",
+    "generate-report": "merge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "tester": "npm run clean:reports && npm run cy:login",
+    "mergeandgenerate": "npm run merge:reports && npm run create:html:report",
+    "runall": "npm run tester && mergeandgenerate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^5.1.0",
+    "cypress-cucumber-preprocessor": "^2.5.5",
+    "cypress-image-snapshot": "^3.1.1",
+    "prettier": "^2.1.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

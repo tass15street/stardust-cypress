@@ -1,0 +1,11 @@
+{
+  "four_weeks": {
+    "period": "1month",
+    "essential" : "Hyde Park Barracks - Essential5 - 28 days",
+    "awesome" : "Hyde Park Barracks - Awesome5 - 28 days",
+    "supersonic": "Hyde Park Barracks - Supersonic6 - 28 days "
+  },
+  "one_day": {
+
+  }
+}
