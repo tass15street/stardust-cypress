@@ -1,17 +1,30 @@
 import BasePage from "../BasePage";
 
+const upgradeCard = '.columns.medium-4'
+const portalBtn = '.button'
 
 
 export default class UpgradePage extends BasePage {
 
-  static checkLoginTxt() {
-    return cy.get(loginTxt, { timeout: 30 * 1000  }).contains(lgtxt)
-  }
+    static upgradePlan(plan) {
+        cy.get(upgradeCard, { timeout: 30 * 1000  }).each(($el, index, $list) => {
 
+            if($el.text().includes(plan)){
+                cy.wrap($el).find(portalBtn).click();
+            }
 
-  static getMainMenuItems(item){
-
-   return cy.get(menuItems, { timeout: 30 * 1000  }).contains(item)
-  }
+        })
+        /*
+        cy.get(upgradeCard, { timeout: 30 * 1000  }).then($upgPlan => {
+          cy.wrap($upgPlan).contains(plan)
+          .parentsUntil(upgradeCard)
+          .find(portalBtn).click();
+    
+        })
+        */
+        
+       
+    
+     }
 
 }
