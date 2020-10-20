@@ -18,7 +18,7 @@
     "generate-report": "merge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "tester": "npm run clean:reports && npm run cy:login",
     "mergeandgenerate": "npm run merge:reports && npm run create:html:report",
-    "runall": "npm run tester && mergeandgenerate"
+    "runall": "npm run tester && mergeandgenerate" 
   },
   "keywords": [],
   "author": "",
