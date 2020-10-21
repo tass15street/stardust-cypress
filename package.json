@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:sanity": "npx cypress-tags run --env "TAGS=@Sanity" --record --parallel --key 696d1104-995c-4743-ad52-56095d3a0abd",
+    "cy:sanity": "./node_modules/.bin/cypress-tags run --env 'TAGS=@Sanity' --record --key 696d1104-995c-4743-ad52-56095d3a0abd",
     "cy:open": "cypress open",
     "cy:login": "cypress-tags run --browser chrome --config pageLoadTimeout=100000 -e TAGS='@login'",
     "cy:run-dashboard": "cypress run --record --key 54b7a8fd-ebe7-48d8-9236-988e6920b2a6",
