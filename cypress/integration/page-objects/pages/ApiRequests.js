@@ -78,6 +78,14 @@ export default class ApiRequests{
    this.setEmail("awesome")
    cy.get("@regSetEmail").then((email) => {
   
+    let stat = 100
+    //while(!(stat == 200)){
+
+      while((stat < 200)){
+        stat = 200
+        cy.log("greater than me" + stat)
+        
+
     cy.request({
       method: "POST",
       url: "https://api.qa.stardust.wifinity.codes/user",
@@ -96,9 +104,15 @@ export default class ApiRequests{
         "autoAddDevice": false
        }
       }).then((resp) => {
+        stat = resp.status
+
+        cy.log(stat)
        cy.wrap(resp.body.userId).as("userId")
 
     })
+  }
+
+ // }
   })
   }
 
