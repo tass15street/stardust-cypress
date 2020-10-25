@@ -1,4 +1,4 @@
-@Sanity
+@Sanity @ManageYourPlan
 Feature: Manage Your Plan Account
 This feature allows the user to manage their plan (Cancel plan, Upgrade plan, Buy Add-ons)
 
@@ -24,7 +24,7 @@ This feature allows the user to manage their plan (Cancel plan, Upgrade plan, Bu
      Then Logout of App
 
 
-    Scenario: The user goes through the entire Home Networking tutorial
+    Scenario: The user navigates to the Home Networking page and navigates backwards
     And a new subscription is created for a plan "1month" and period of "Awesome"
      When user enters and submits "Custom" credentials
      And the user clicks on "Manage Your Plan" menu link
