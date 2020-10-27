@@ -1,4 +1,4 @@
-@Sanity @ManageYourPlan
+@Sanity @ManageYourPlan @login
 Feature: Upgrade User Account
 This feature allows the user to manage their plan (Cancel plan, Upgrade plan, Buy Add-ons)
 
