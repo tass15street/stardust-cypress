@@ -50,6 +50,7 @@ export default class loginPage extends BasePage {
 
   static enterLogin(details) {
 
+    
     cy.fixture('profiles').then(data =>{
     switch (details) {
 
@@ -64,7 +65,7 @@ export default class loginPage extends BasePage {
           break;
 
         case "Custom":
-          cy.get("@regSetEmail").then((email) =>{
+          cy.get(this.getGlobalEmail()).then((email) =>{
             this.getLoginFlds(0).type(email)
             });
           this.getLoginFlds(1).type(data.password)

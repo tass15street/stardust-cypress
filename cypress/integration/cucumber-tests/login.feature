@@ -6,10 +6,6 @@ Feature: Login
     Given the user navigates to the application
     
 
-    Scenario: InValid login
-    When user enters and submits "Sad" credentials
-    Then the "username" modal popup should be displayed
-
 
     Scenario: Valid login
     And a new subscription is created for a plan "1month" and period of "Essential"

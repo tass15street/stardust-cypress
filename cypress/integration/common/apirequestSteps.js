@@ -7,16 +7,3 @@ defineStep("a new subscription is created for a plan {string} and period of {str
     apiRequest.getPeriodAndPlan(period, plan)
   
   });
-
-
-  defineStep("the user creates network request {string} of {string}", (period, plan) => {
-
-    apiRequest.getPeriodAndPlan(period, plan)
-    if(expect(apiRequest.setEmail()).to.contain('@')){
-      cy.log("better");
-  
-    }
-    cy.log(apiRequest.setEmail());
-    apiRequest.getPlansForSite();
-  
-  });

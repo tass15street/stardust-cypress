@@ -35,12 +35,9 @@ defineStep("the cancel status is displayed", () => {
 
 defineStep("scroll {string} carousel {string} times", (direction, times) => {
 
-    
-    
     let count = 1
     while(count <= times){
 
-        cy.log("times")
     if(direction.includes("next")){
       
      manageYourPlan.clickHomeNetNxtBtn()

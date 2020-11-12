@@ -1,4 +1,4 @@
-import { stardust_homepage_url, starship_login_url } from "../../../config";
+import { stardust_homepage_url } from "../../../config";
 import ApiRequests from './pages/ApiRequests'
 
 const mldAction = ".actions ._button"
@@ -174,12 +174,9 @@ export default class BasePage extends ApiRequests  {
     .find(portalBtn).click();
 
     })
-    
-   
 
  }
 
- 
 
   static clickBackButton(){
     cy.get(backButton, { timeout: 30 * 1000  }).click();
@@ -189,7 +186,6 @@ export default class BasePage extends ApiRequests  {
     return cy.get(mdlMsg, { timeout: 30 * 1000  })
   }
 
-// signup 
 
 static getRegField(index){
   return cy.get(regFields, { timeout: 30 * 1000  }).eq(index)
@@ -201,7 +197,6 @@ static getRegField(index){
     this.getRegField(1).type(data.es_user_name);
     cy.get("@planType").then((plnTpe) => {
 
-     // this.getRegField(2).type("earlycaterpillar@maildrop.cc")
      this.setEmail(plnTpe)
      cy.get("@regSetEmail").then((email) =>{
       this.getRegField(2).type(email);

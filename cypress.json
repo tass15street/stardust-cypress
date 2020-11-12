@@ -8,10 +8,6 @@
     "*.md"
   ],
   "chromeWebSecurity": false,
-  "retries":{
-    "runMode": 3,
-    "openMode": 2
-  },
   "projectId": "51pjr2",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {

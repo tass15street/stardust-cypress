@@ -10,7 +10,7 @@ import paymentMethod from "../page-objects/pages/PaymentMethod";
 import FinishSignup from "../page-objects/pages/FinishSignupPage";
 import GuestPass from "../page-objects/pages/GuestPassPage";
 import GuestPassRedemption from "../page-objects/pages/GuestPassRedemptionPage";
-import TempEmail from "../page-objects/pages/TempMailPage";
+
 
 
 
@@ -42,18 +42,6 @@ defineStep("the user enters and submits voucher {string}", (voucher) => {
   StardustHome.enterVoucher(voucher);
 
 });
-
-
-
-
-
-defineStep("the user navigates to the temporary email application", () => {
-
-  TempEmail.visitTempEmail();
-  TempEmail.getResetEmailUrl();
-
-});
-
 
 
 

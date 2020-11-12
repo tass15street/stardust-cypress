@@ -3,51 +3,62 @@
 const four_week = "4week"
 const essential = "Essential"
 const signup_voucher = 'mine'
+const globalEmail = '@regSetEmail'
 
 export default class ApiRequests{
 
-
+static getGlobalEmail(){
+  return globalEmail
+   
+} 
   static getPeriodAndPlan(period, plan) {
   
-        switch (period) {
-
-          case "1year":
-            cy.wrap(period).as("chosenPeriod")
-            break;
-
-          case "1month":
-            cy.wrap(period).as("chosenPeriod")
-            break;
-
-            case "1week":
-              cy.wrap(period).as("chosenPeriod")
-            break;
-
-            case "1day":
-              cy.wrap(period).as("chosenPeriod")
-            break;
- 
-        }
-
-        if (plan == "Essential") {
-
-         cy.log(plan)
-          cy.wrap(plan).as("chosenPlan")
-  
-        }else if(plan == "Awesome"){
-
-          cy.wrap(plan).as("chosenPlan")
-
-        }else if(plan == "Supersonic"){
-
-          cy.wrap(plan).as("chosenPlan")
-
-        }
-
-        this.getSignupUser()
-        this.getPlansForSite()
-        this.createPaidUserSubscription()
+    this.setPeriod(period)
+    this.setPlan(plan)
+    this.getSignupUser()
+    this.getPlansForSite()
+    this.createPaidUserSubscription()
   }
+
+  static setPeriod(period){
+    switch (period) {
+
+      case "1year":
+        cy.wrap(period).as("chosenPeriod")
+        break;
+
+      case "1month":
+        cy.wrap(period).as("chosenPeriod")
+        break;
+
+        case "1week":
+          cy.wrap(period).as("chosenPeriod")
+        break;
+
+        case "1day":
+          cy.wrap(period).as("chosenPeriod")
+        break;
+
+    }
+  }
+
+  static setPlan(plan){
+    switch (plan) {
+
+      case "Essential":
+        cy.wrap(plan).as("chosenPlan")
+        break;
+
+      case "Awesome":
+        cy.wrap(plan).as("chosenPlan")
+        break;
+
+        case "Supersonic":
+          cy.wrap(plan).as("chosenPlan")
+        break;
+  }
+  this.setEmail(plan)
+}
 
   static createPaidUserSubscription(){
     cy.get("@userId").then((userId) => {     
@@ -73,10 +84,7 @@ export default class ApiRequests{
 }
   static getSignupUser(){
 
-   // let email = this.setEmail()
-  
-   this.setEmail("awesome")
-   cy.get("@regSetEmail").then((email) => {
+   cy.get(this.getGlobalEmail()).then((email) => {
   
 
     cy.request({
@@ -101,9 +109,6 @@ export default class ApiRequests{
        cy.wrap(resp.body.userId).as("userId")
 
     })
-
-
- // }
   })
   }
 
