@@ -34,10 +34,6 @@ export default class StardustHomePage extends BasePage {
 
   }
 
-  static visitStarship(){
-    cy.visit(stardust_login_url)
-  }
-
 
   static selectLogin(){
     cy.contains(loginBtnTxt, {timeout: 30 * 1000}).click()

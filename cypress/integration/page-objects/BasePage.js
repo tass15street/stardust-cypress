@@ -62,31 +62,9 @@ export default class BasePage extends ApiRequests  {
     cy.get(logout, { timeout: 30 * 1000  }).click()
   }
 
-  static getMdlMsges(msg){
-    cy.fixture("mdlMsgs").then(data => {
-
-      switch (msg) {
-        case "ma_stillActive":
-          cy.wrap(mdlText).as(ma_stillActive);
-          break;
-
-        case "ma_DeletePayment":
-          cy.wrap(mdlText).as(ma_DeletePayment);
-          break;
-
-        case "ma_duplicateEmail_Main_Msg":
-          cy.wrap(mdlText).as(ma_duplicateEmail_Main_Msg);
-          break;
-
-        case "ma_duplicateEmail_Sub_Msg":
-          cy.wrap(mdlText).as(ma_duplicateEmail_Sub_Msg);
-          break;
-
-      }
-    })
+  static getModalTxt(){
+    return cy.get(mdlMessage)
   }
-
-
   static getMdalText(index, txt) {
 
     cy.get(mdl).then((mdlPop) => {

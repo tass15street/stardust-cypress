@@ -1,6 +1,6 @@
 @GuestPass @Sanity
 Feature:  Redeeming guest passes 
-  This feature allows the user to enter valid and invalid user credentials
+  This feature allows the user to redeem valid guest pass
 
    Background:
     Given the user navigates to the application

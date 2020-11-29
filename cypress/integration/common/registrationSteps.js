@@ -8,10 +8,8 @@ import FinishSignup from "../page-objects/pages/FinishSignupPage";
 
 
 
-defineStep("the user registers an {string} plan for a {string} period", (plan, period) => {
+defineStep("the user registers plan {string} for a {string} period", (plan, period) => {
     
-
- 
     StardustHome.choosePlan(period, plan)
     registerAcnt.fill_PersonalDetails("createAccount");
     confirmPlan.acceptConditions("terms");

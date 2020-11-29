@@ -13,10 +13,6 @@ import GuestPassRedemption from "../page-objects/pages/GuestPassRedemptionPage";
 
 
 
-
-
-
-
 defineStep("the user enters {string} registration details", (detailsType) => {
 
   registerAcnt.fill_PersonalDetails(detailsType);
@@ -74,24 +70,35 @@ defineStep("the user logs out of the portal", (action) => {
 
 defineStep("the {string} modal popup should be displayed", ( msgExpect) => {
 
-  cy.fixture("mdlMsgs").then(data => {
    cy.fixture("mdlMsgs").then(data => { 
-
+   
+    loginPage.pause(2000)
     switch (msgExpect) {
       
       case "username":
-        loginPage.pause(2000)
         loginPage.showErrorMessage().invoke('text').then(($txt) => {
 
           expect($txt).to.contain(data.lgn_error)
         });
-        
-      break;
-        
+        break;
+
+        case "macDuplicate":
+          loginPage.getModalTxt().invoke('text').then(($txt) => {
+
+            expect($txt).to.contain(data.ma_duplicateMac)
+          });
+        break;
+
+        case "ma_deviceLimit":
+          loginPage.getModalTxt().invoke('text').then(($txt) => {
+
+            expect($txt).to.contain(data.ma_deviceLimit)
+          });
+        break;
     }
   });
 });
-});
+
 
 defineStep("the user finalises their signup", () => {
 
@@ -198,18 +205,10 @@ defineStep("the user opens the login page", () => {
 });
 
 
-defineStep("the user updates the user email address", () => {
-
-  // StarshipHome.selectLogin();
-
-});
-
-
 defineStep("user enters {string} details for their account", details => {
 
   accountEdit.fill_EditDetails(details);
 
-  //details accountEdit
 
 });
 
@@ -217,7 +216,6 @@ defineStep("user enters {string} payment details", details => {
 
   paymentMethod.fill_Payment(details);
 
-  //details accountEdit
 
 });
 
@@ -234,16 +232,6 @@ defineStep("user restores the old password", details => {
   accountEdit.restorePassword();
 
 });
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -5,5 +5,7 @@
     "ma_duplicateEmail_Sub_Msg": "User with email test@test.com is already registered in the system.",
     "ma_incorrectPassword": "Incorrect Password!",
     "ma_passwordChange": "Password changed successfully",
+    "ma_duplicateMac": "has already been added to this account",
+    "ma_deviceLimit": "reached your device change limit",
     "lgn_error": "Username or password doesn't match"
 }
