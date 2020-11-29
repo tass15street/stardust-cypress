@@ -14,6 +14,7 @@
     "delete:report": "rm -rf public/* || true",
     "delete:testOutputs": "npm run delete:results && npm run delete:report",
     "cypress-login-pack": "npm run delete:testOutputs && npm run cy:login && npm run merge_generate:reports",
+    "cypress-sanity-pack": "npm run delete:testOutputs && npm run cy:sanity && npm run merge_generate:reports",
     "test": "npm run clean: reports && cypress run",
     "merge_generate:reports": "npx mochawesome-merge cypress/results/mochawesome/*.json > cypress/results/index.json && npx marge cypress/results/index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
