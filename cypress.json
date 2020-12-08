@@ -3,17 +3,15 @@
   "testFiles": "**/*.{feature,features}",
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 10000,
-  "ignoreTestFiles": [
-    "*.js",
-    "*.md"
-  ],
+  "ignoreTestFiles": ["*.js", "*.md"],
   "chromeWebSecurity": false,
+  "retries": {
+    "runMode": 2,
+    "openMode": 2
+  },
   "projectId": "51pjr2",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "configFile": "reporter-config.json"
   }
-
-    }
-  
-
+}
