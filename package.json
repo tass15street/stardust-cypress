@@ -9,6 +9,8 @@
     "cy:remote-myaccount": "./node_modules/.bin/cypress-tags run --env TAGS=@MyAccount --record --key 696d1104-995c-4743-ad52-56095d3a0abd --parallel",
     "cy:remote-billinginformation": "./node_modules/.bin/cypress-tags run --env TAGS=@BillingInformation --record --key 696d1104-995c-4743-ad52-56095d3a0abd --parallel",
     "cy:remote-manageyourplan": "./node_modules/.bin/cypress-tags run --env TAGS=@ManageYourPlan --record --key 696d1104-995c-4743-ad52-56095d3a0abd --parallel",
+    "cy:remote-UpgradePlans": "./node_modules/.bin/cypress-tags run --env TAGS=@UpgradePlans --record --key 696d1104-995c-4743-ad52-56095d3a0abd --parallel",
+    "cy:remote-AccountBill": "./node_modules/.bin/cypress-tags run --env TAGS=@AccountBill --record --key 696d1104-995c-4743-ad52-56095d3a0abd --parallel",
     "cy:open": "cypress open",
     "cy:local-sanity": "cypress-tags run --config pageLoadTimeout=100000 -e TAGS='@Sanity'",
     "cy:local-login": "cypress-tags run --config pageLoadTimeout=100000 -e TAGS='@login'",

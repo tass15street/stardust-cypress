@@ -1,4 +1,4 @@
-@DeviceManagement @Sanity
+@DeviceManagement @Sanity @AccountBill
 Feature:  Device Management
   This feature allows the user to add, edit and delete devices to their account
 
