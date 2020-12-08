@@ -16,6 +16,7 @@ defineStep("the user enters {string} into the mac address field", (details) => {
   deviceManagement.fill_device(details)
 });
 
+
 defineStep("the user exceeds their device change limit for {string} plan", (plan) => {
 
   let limit = 0

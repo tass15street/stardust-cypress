@@ -128,30 +128,4 @@ export default class RegisterAccountPage extends BasePage {
       });
 
     }
-
-   
-  
-  
-
-
-    static createEmail(){
-      var strValues = "abcd12345";
-      var strEmail = "";
-      var strTmp;
-      
-      for (var i = 0; i < 10; i++) {
-          strTmp = strValues.charAt(Math.round(strValues.length * Math.random()));
-          strEmail = strEmail + strTmp;
-      }
-    
-
-    strTmp = "";  
-    strEmail = "earlycaterpillar@maildrop.cc";
-
-    return strEmail;
-
-    }
-    
-
 }
-

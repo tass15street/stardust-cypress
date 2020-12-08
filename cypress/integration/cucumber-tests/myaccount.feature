@@ -1,4 +1,4 @@
-@Sanity
+@Sanity @MyAccount
 Feature: My Account
 This feature allows the user to manage their account details
 
@@ -8,8 +8,8 @@ This feature allows the user to manage their account details
       
 
   Scenario: Attempt to remove payment card with an active subscription
-    When the user registers an "Awesome" plan for a "Monthly" period
-    And the user clicks on "My Account" menu link
+    And the user registers plan "Essential" for a "Monthly" period
+    When the user clicks on "My Account" menu link
     And the user selects the "Remove" action
     And the user selects the "Yes" action
     Then the "1" modal popup message with "active" text should be displayed matching "ma_stillActive"
@@ -80,6 +80,3 @@ Scenario: Attempt to update user email with an already existing email
     And the user selects the "Close" action
     And user restores the old password
     And the user selects the "Update password" action
-
-
-

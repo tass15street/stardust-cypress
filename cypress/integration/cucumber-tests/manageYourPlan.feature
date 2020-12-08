@@ -39,6 +39,3 @@ This feature allows the user to manage their plan (Cancel plan, Upgrade plan, Bu
      And the user selects the "Cancel my wifinity service" action
      And the user clicks the "Back" button
      Then Logout of App
-
-
-  

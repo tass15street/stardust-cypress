@@ -4,8 +4,28 @@ import BasePage from "../BasePage";
 
 const device_connection = ".device-connection-mac"
 const device_field = ".field-block > .field";
+const deviceChange_AvailSlots = '.available-item'
+let Avaliable_Dev_Slots = ''
 
 export default class DeviceManagementPage extends BasePage {
+
+
+    static getCurrentSlots(){
+        cy.get("@available_device_slots").then((availDevSlots) => {
+            this.Avaliable_Dev_Slots = availDevSlots
+            cy.log(availDevSlots)
+        });
+    }
+
+    static getAvailableSlots(){
+        cy.get(deviceChange_AvailSlots).eq(0).invoke('text').then($availSlots => {
+
+            let available_device_slots= $availSlots.substr(17, 18)
+            cy.wrap(available_device_slots).as("available_device_slots");
+
+        })
+
+    }
 
     static getDeviceConnection() {
         cy.get(device_connection).invoke('text').then($dvCon => {
@@ -60,10 +80,20 @@ export default class DeviceManagementPage extends BasePage {
             .invoke('removeAttr', 'disabled')
     }
 
+
+    static checkAvailslots(){
+        this.getCurrentSlots()
+    }
+
     static fillAllDeviceSlots(plan) {
+
+       
+        
         for (let i = 0; i <= 3; i++) {
 
             this.addDevice()
+
+           
 
         }
     }

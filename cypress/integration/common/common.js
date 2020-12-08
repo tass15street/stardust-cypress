@@ -12,7 +12,6 @@ import GuestPass from "../page-objects/pages/GuestPassPage";
 import GuestPassRedemption from "../page-objects/pages/GuestPassRedemptionPage";
 
 
-
 defineStep("the user enters {string} registration details", (detailsType) => {
 
   registerAcnt.fill_PersonalDetails(detailsType);
@@ -232,6 +231,3 @@ defineStep("user restores the old password", details => {
   accountEdit.restorePassword();
 
 });
-
-
-

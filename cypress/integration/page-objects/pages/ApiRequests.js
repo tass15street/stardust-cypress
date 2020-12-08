@@ -1,5 +1,3 @@
-//import BasePage from "../BasePage";
-
 const four_week = "4week"
 const essential = "Essential"
 const signup_voucher = 'mine'

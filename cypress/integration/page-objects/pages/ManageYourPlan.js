@@ -10,11 +10,19 @@ const acntStatusTitle = 'Your plan is Cancelled'
 const homeNetNxtBtn = '.swiper-button-next'
 const homeNetPrevBtn = '.swiper-button-prev'
 
-
 const cancelPlanTitle = '.warning-block p'
+
+//cancel form elements
+const cancelPlanReasonElements = '.presenter-multiple-choice-choice'
+
 
 export default class ManageYourPlan extends BasePage {
 
+
+    static selectReasonForCancel(i){
+
+        cy.get(cancelPlanReasonElements).eq(i).click();
+    }
 
     static checkPlan(){
      return  cy.get(crtPlanTtitle, {timeout:30 * 1000})
@@ -25,7 +33,15 @@ export default class ManageYourPlan extends BasePage {
         cy.get(cancelPlanSurvey)
         .iframe().then($element => {
 
-            cy.wrap($element).find(surveyOptions).eq(opt).click()
+            if(opt == null){
+                
+                cy.wrap($element).find(surveyOptions).eq(1).click()
+
+            }else{
+
+                cy.wrap($element).find(surveyOptions).eq(opt).click()
+            }
+            
             cy.wrap($element).find(surveysbmBtn).click()
 
       })
