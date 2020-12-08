@@ -2,7 +2,6 @@
 Feature: My Account
 This feature allows the user to manage their account details
 
-
  Background:
     Given the user navigates to the application
       
