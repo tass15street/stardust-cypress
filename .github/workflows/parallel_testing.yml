@@ -30,7 +30,7 @@ jobs:
           $(npm bin)/cypress verify
 
       - name: Run Cypress tests
-        run: npm run cypress-sanity-pack
+        run: npm run cypress-remote-sanity-pack
         continue-on-error: true
 
       - name: Deploy report page
